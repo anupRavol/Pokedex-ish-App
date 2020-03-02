@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">Pokedex-ish App</string>
+    <string name="list_fragment_title">Rick and Morty Characters</string>
+</resources>

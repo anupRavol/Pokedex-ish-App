@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_nav"
+    app:startDestination="@id/listFragment">
+
+    <fragment
+        android:id="@+id/listFragment"
+        android:name="com.example.pokedex_ishapp.view.ListFragment"
+        android:label="@string/list_fragment_title"
+        tools:layout="@layout/fragment_list" >
+        <action
+            android:id="@+id/action_list_to_detail"
+            app:destination="@id/detailFragment2" />
+    </fragment>
+    <fragment
+        android:id="@+id/detailFragment2"
+        android:name="com.example.pokedex_ishapp.view.DetailFragment"
+        android:label="{title}"
+        tools:layout="@layout/fragment_detail" >
+        <argument
+            android:name="result"
+            app:argType="com.example.pokedex_ishapp.model.Result" />
+        <argument
+            android:name="title"
+            app:argType="string" />
+    </fragment>
+</navigation>
